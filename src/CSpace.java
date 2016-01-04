@@ -14,7 +14,7 @@ public class CSpace {
 
         Polygon robot = new Polygon("E:\\Project\\java_prj\\generate_C-space\\robot.txt");
         Polygon obstacle = new Polygon("E:\\Project\\java_prj\\generate_C-space\\obstacle.txt");
-        Polygon cSpace = culCSpace(robot.getVertexes(),obstacle.getVertexes());
+        Polygon cSpace = calCSpace(robot.getVertexes(),obstacle.getVertexes());
         CPanel panel = new CPanel(robot,obstacle,cSpace);
 
         //在frame中添加panel
@@ -34,7 +34,7 @@ public class CSpace {
      * @param robot 输入构成机器人多边形的顶点
      * @param obstacle  输入构成障碍物多边形的顶点
      */
-    public static Polygon culCSpace(Point[] robot, Point[] obstacle){
+    public static Polygon calCSpace(Point[] robot, Point[] obstacle){
         int i=0;
         int j=0;
         int n = robot.length-1;
